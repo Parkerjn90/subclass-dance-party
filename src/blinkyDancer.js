@@ -3,6 +3,7 @@ var BlinkyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
 
   this.$node = $("<img id='blinky-dancer' src='../assets/blinky-dancer.png'>");
+  // this.step();
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);

@@ -38,4 +38,7 @@ $(document).ready(function() {
     window.dancers.push(dancer);
 
   });
+
+
+
 });
