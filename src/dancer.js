@@ -4,15 +4,13 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class=""></span>');
-  this.step();
 };
 
 Dancer.prototype.step = function() {
-  console.log(this);
+  // console.log(this);
   var that = this;
   setTimeout(function () {
-    console.log('inside: ', that);
-    // somehow we need this to reference Dancer and not Window
+    // console.log('inside: ', that);
     that.step.call(that);
   }, this.timeBetweenSteps);
 
@@ -26,28 +24,13 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
+// var dancer1 = new Dancer(2, 3, 100);
 
-
-// From ogDancer.js
-
-// dancer.step = function() {
-//   // the basic dancer doesn't do anything interesting at all on each step,
-//   // it just schedules the next step
-//   setTimeout(dancer.step, timeBetweenSteps);
-// };
-// dancer.step();
-
-
-// From ogBlinkyDancer.js
-// var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
-
-// var oldStep = blinkyDancer.step;
-
-// blinkyDancer.step = function() {
-//   // call the old version of step at the beginning of any call to this new version of step
-//   oldStep();
-//   // toggle() is a jQuery method to show/hide the <span> tag.
-//   // See http://api.jquery.com/category/effects/ for this and
-//   // other effects you can use on a jQuery-wrapped html tag.
-//   blinkyDancer.$node.toggle();
-// };
+// dancer 1 = {
+//   top: top,
+//   left: left,
+//   timeBetweenSteps: timeBetweenSteps,
+//   $node: $('span....'),
+//   (prototype) step: function(),
+//   (prototype) setPosition: function()
+// }
