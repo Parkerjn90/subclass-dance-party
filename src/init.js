@@ -25,12 +25,18 @@ $(document).ready(function() {
     // console.log(dancerMakerFunction);
     // make a dancer with a random position
 
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
 
+    var dancer = new dancerMakerFunction(
+      100,
+      100,
+      1000
+    );
+    // var dancer = new dancerMakerFunction(
+    //   $("body").height() * Math.random(),
+    //   $("body").width() * Math.random(),
+    //   1000
+    // );
+    // old time= Math.random() * 1000
     // console.log('dancer: ', dancer);
     dancer.step();
     dancer.setPosition(dancer.top, dancer.left);

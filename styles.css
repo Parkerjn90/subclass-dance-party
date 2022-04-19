@@ -25,3 +25,18 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+#blinky-dancer {
+  width:auto;
+  height:20vh;
+}
+
+#hippy-dancer {
+  width:auto;
+  height:20vh;
+}
+
+#breaky-dancer {
+  width:auto;
+  height:20vh;
+}
