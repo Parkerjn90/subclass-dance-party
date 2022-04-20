@@ -34,6 +34,8 @@ Dancer.prototype.lineUp = function (top, left) {
   // this.$node.addClass('lined-up');
 };
 
+
+
 // Dancer.prototype.mouseOver = function(borderColor) {
 //   var styleSettings = {
 //     border: '10px solid blue',
