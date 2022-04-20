@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  /* background-image: url("assets/background.jpeg"); */
+  background-image: url("assets/background.jpeg");
+  background-size: cover;
   font-size: 18px;
 }
 
@@ -15,28 +16,42 @@ body{
 body, a:link, a:visited, a:active{
   color: #000;
 }
+
 .title, .btn{
   padding:5px 12px;
   float:right;
 }
+
+.title {
+  color: #434D46;
+  font: 20px/1.1 'Rubik Wet Paint', cursive;
+  background-color: #59996D;
+  text-shadow: 8px 0 10px #CF4F28, -8px 0 20px #E58039;
+}
+
+.btn {
+  color: #434D46;
+  font: 500 20px/1.2 'Big Shoulders Inline Text', cursive;
+  text-decoration: none;
+}
+
 .topbar{
   height:32px;
   background-color: #76CB91;
 }
-.title{
-  background-color: #59996D;
-}
+
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
+  /* border: 10px solid red; */
+  filter: drop-shadow(30px 10px 4px #BFDB57);
 }
 
-.lined-up{
-  /* top: 100; */
-}
+/* .lined-up {
+  display: inline;
+  flex-wrap: wrap;
+} */
 
-.flipped{
+.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
@@ -59,3 +74,6 @@ body, a:link, a:visited, a:active{
   width:auto;
   height:20vh;
 }
+
+/* font-family: 'Big Shoulders Inline Text', cursive;
+font-family: 'Rubik Wet Paint', cursive; */

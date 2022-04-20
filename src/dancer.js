@@ -35,6 +35,39 @@ Dancer.prototype.lineUp = function (top, left) {
 };
 
 
+Dancer.prototype.checkCollision = function(top, left) {
+  let nodeY = top + 30;
+  let nodeX = left + 30;
+
+  // console.log(nodeX, nodeY);
+
+  window.dancers.forEach(function(dancer) {
+    let dancerX = dancer.$node.position().left + 30;
+    let dancerY = dancer.$node.position().top + 30;
+    // console.log(dancerX, dancerY);
+    // console.log(dancer.$node.attr('class'), dancerX, dancerY);
+    // console.log(dancer.$node.width());
+
+    let a = nodeX - dancerX;
+    let b = nodeY - dancerY;
+    // console.log(a, b);
+    // c = square root of a^2 + b^2
+    let c = Math.sqrt(Math.pow((a), 2) + Math.pow((b), 2));
+    c = Math.floor(c);
+    if (c <= 80 && c !== 0) {
+      console.log('COLLISION!', c);
+      dancer.$node.css('border', '10px solid green');
+    } else {
+      dancer.$node.css('border', '0');
+    }
+
+  });
+
+};
+
+
+
+
 
 // Dancer.prototype.mouseOver = function(borderColor) {
 //   var styleSettings = {

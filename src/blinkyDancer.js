@@ -11,6 +11,7 @@ BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function () {
   Dancer.prototype.step.call(this);
+  Dancer.prototype.checkCollision(this.top, this.left);
 
   if (!this.$node.hasClass('lined-up')) {
     this.top = Math.random() * (200 - 10) + 10;
@@ -27,7 +28,7 @@ BlinkyDancer.prototype.step = function () {
   });
   this.$node.on('mouseout', function () {
     var styleSettings = {
-      border: '10px solid red'
+      border: '0'
     };
     $(this).css(styleSettings);
   });
