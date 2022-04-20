@@ -3,22 +3,28 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  /* background-image: url("assets/background.jpeg"); */
   font-size: 18px;
 }
-body, a:link, a:visited, a:active{
-  color: lightblue;
+
+.background{
+  width: 100%;
+  height: auto;
 }
-.title, .addDancerButton{
+
+body, a:link, a:visited, a:active{
+  color: #000;
+}
+.title, .btn{
   padding:5px 12px;
   float:right;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: #76CB91;
 }
 .title{
-  background-color: #777;
+  background-color: #59996D;
 }
 .dancer{
   border:10px solid red;
@@ -26,10 +32,23 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.lined-up{
+  /* top: 100; */
+}
+
+.flipped{
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
 #blinky-dancer {
   width:auto;
   height:20vh;
 }
+
+/* #blinky-dancer:hover {
+  border: 10px solid blue;
+} */
 
 #hippy-dancer {
   width:auto;

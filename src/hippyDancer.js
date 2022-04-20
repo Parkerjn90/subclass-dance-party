@@ -12,4 +12,9 @@ HippyDancer.prototype.constructor = HippyDancer;
 HippyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   // this.$node.toggle();
+  if (!this.$node.hasClass('lined-up')) {
+    this.left = Math.random() * (500 - 10) + 10;
+    // console.log(this.position);
+    this.setPosition(this.top, this.left);
+  }
 };

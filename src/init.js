@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   window.dancers = [];
   // console.log(window);
-  $('.addDancerButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function (event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -27,9 +27,9 @@ $(document).ready(function() {
 
 
     var dancer = new dancerMakerFunction(
-      100,
-      100,
-      1000
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      500
     );
     // var dancer = new dancerMakerFunction(
     //   $("body").height() * Math.random(),
@@ -45,6 +45,29 @@ $(document).ready(function() {
 
   });
 
+  $('.lineUpButton').on('click', function (event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].$node.addClass('lined-up');
+      window.dancers[i].lineUp(100, (100 + i * 100));
+    }
 
+  });
+
+
+  $('.scatterButton').on('click', function (event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].$node.removeClass('lined-up');
+    }
+  });
+  // $('#blinky-dancer').on('mouseover', function(event) {
+  //   console.log('mouseover');
+
+  //   // var styleSettings = {
+  //   //   border: '10px solid blue',
+  //   //   // 'border-color': borderColor
+  //   // };
+  //   // $('#blinky-dancer').css('border', '4px solid blue');
+  //   // console.log(this, 'blinky dancer mouse over');
+  // });
 
 });
